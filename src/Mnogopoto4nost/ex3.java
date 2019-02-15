@@ -5,6 +5,9 @@
  */
 package Mnogopoto4nost;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author user1
@@ -15,7 +18,20 @@ public class ex3 {
         @Override
         public void run() {
             
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ex3.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            System.err.println("...gotovim po receptu..");
         }
     }
-    
+     public static void main(String[] args) {
+        Thread thread = new Thread(new Recipe());
+        thread.start();
+        
+        thread.setName("Cook");
+        System.err.println(thread.getName());
+        System.err.println(Thread.currentThread().getName());
+}
 }
