@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Patterns.Template2;
+
+/**
+ *
+ * @author user
+ */
+public class Coffee {
+    void prepareRecipe() {
+        boilWater();
+        brewCoffeeGrinds();
+        pourInCup();
+        addSugarAndMilk();
+    }
+
+    private void boilWater() {
+        System.out.println("Boiling water");
+    }
+
+    private void brewCoffeeGrinds() {
+        System.out.println("Dripping Coffee through filter");
+    }
+
+    private void pourInCup() {
+        System.out.println("Pouring into cup");
+    }
+
+    private void addSugarAndMilk() {
+        System.out.println("Adding Sugar and Milk");
+    }
+    
+}
